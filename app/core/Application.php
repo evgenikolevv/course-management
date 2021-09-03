@@ -18,6 +18,7 @@ class Application
     
     public function __construct($rootPath, $viewPath)
     {   
+        session_start();
         self::$ROOT_DIR = $rootPath;
         self::$VIEW_DIR = $viewPath;
         self::$app = $this;

@@ -59,7 +59,7 @@ class Router
         return call_user_func($callback, $this->request);
     }
 
-    public function renderView(string $view,  array $params = []) : void
+    public function renderView(string $view,  array $data = []) : void
     {   
         if (file_exists(VIEW_ROOT . $view . '.php ')) {
             require_once VIEW_ROOT . $view . '.php';
