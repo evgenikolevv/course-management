@@ -6,9 +6,9 @@ define("VIEW_ROOT", APP_ROOT . "/views/");
 
 define('DB_DRIVER', 'pgsql');
 
-define('DB_HOST', 'localhost');
+define('DB_HOST', '127.0.0.1');
 
-define('HOST_PORT','5433');
+define('HOST_PORT','5432');
 
 define('DB_PASS', 'ekolev98');
 
