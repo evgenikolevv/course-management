@@ -9,8 +9,8 @@ use Core\Application;
 class Controller
 {   
     
-    protected function render(string $view, array $params = []) : mixed
+    protected function render(string $view, array $data = []) : mixed
     {
-        return Application::$app->router->renderView($view,$params);
+        return Application::$app->router->renderView($view,$data);
     }
 }
