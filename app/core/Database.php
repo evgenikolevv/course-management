@@ -40,6 +40,7 @@ class Database
                 self::PASSWORD,
                 self::OPTIONS
             );
+
         } catch (PDOException $e) {
 
             $this->error = $e->getMessage();
@@ -84,6 +85,18 @@ class Database
     }
 
     public function fetch()
+    {
+        $this->execute();
+        return $this->statement->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function fetchBool()
+    {
+        $this->execute();
+        return $this->statement->fetch(PDO::FETCH_COLUMN);
+    }
+
+    public function save()
     {
         $this->execute();
         return $this->statement->fetch(PDO::FETCH_ASSOC);
