@@ -14,7 +14,7 @@ class User
 {
     private Database $handler;
 
-    private const FIND_BY_USERNAME = "SELECT username, password, first_name, last_name FROM users WHERE username =:username";
+    private const FIND_BY_USERNAME = "SELECT id, username, password, first_name, last_name FROM users WHERE username =:username";
 
     private const CHECK_IF_USERNAME_IS_TAKEN = "SELECT username FROM users WHERE username = :username;";
 
