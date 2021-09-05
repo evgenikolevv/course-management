@@ -32,7 +32,7 @@
                         <?= $course['user_id'] ?>
                     </td>
                     <td class="table-cell">
-                        <input type="submit" value = "Add">
+                        <input type="submit" class="button btn btn-primary" value = "Add">
                     </td>
                 </tr>
             </form>
