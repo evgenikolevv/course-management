@@ -25,5 +25,6 @@ CREATE TABLE courses_users(
 	user_id INT NOT NULL,
 	course_id INT NOT NULL,
 	CONSTRAINT fk_user_course_id FOREIGN KEY(user_id) REFERENCES users(id),
-	CONSTRAINT fk_course_user_id FOREIGN KEY(course_id) REFERENCES courses(id)
+	CONSTRAINT fk_course_user_id FOREIGN KEY(course_id) REFERENCES courses(id),
+	CONSTRAINT ux_users_courses UNIQUE(user_id,course_id)
 );

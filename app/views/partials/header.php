@@ -8,3 +8,25 @@
     <title> </title>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Course-Management</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php APP_ROOT ?>homepage">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php APP_ROOT ?>courses">Courses</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php APP_ROOT ?>mycourses">My Courses</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php APP_ROOT ?>logout">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -18,6 +18,7 @@ class AuthController extends Controller
     private User $userModel;
 
     private array $params = [
+        'id' => '',
         'username' => '',
         'password' => '',
         'firstname' => '',
@@ -90,6 +91,12 @@ class AuthController extends Controller
         }
         
         return $this->render('register');
+    }
+
+    public function logout() : mixed
+    {
+        Auth::unsetUser();
+        return $this->render('login');
     }
 
     private function setData($view, $error)
