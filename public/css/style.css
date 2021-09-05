@@ -1,0 +1,78 @@
+html{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;    
+}
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family:'Droid Sans';
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    overflow-x: hidden;
+    width:100%;
+}
+
+.container {
+    display: block;
+    margin: 75px auto;
+    width: 1000px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+.form {
+    margin-top: 5%;
+    width: 100%;
+    display: block;
+}
+
+.block {
+    display: block;
+}
+
+.form-input {
+    width: 300px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0.5px solid rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 10px !important;
+}
+
+.navbar-background{
+   background-color: #1B1B2F;
+}
+
+.navbar-text {
+    color : #fff !important;
+}
+
+.button {
+    height: 33px;
+    width: 70px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #162447;
+    color: #fff;
+}
+
+.table {
+    position: relative;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.footer-background {
+    background-color: #1B1B2F;
+    color: #fff;
+}
+
