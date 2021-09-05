@@ -25,4 +25,9 @@ class Auth
 
         return false;
     }
+
+    public static function unsetUser() : void
+    {
+        unset($_SESSION['user']);
+    }
 }
