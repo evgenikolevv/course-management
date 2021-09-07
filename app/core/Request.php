@@ -39,7 +39,11 @@ class Request
     public function getBody() : mixed
     {
         $body = [];
-
+        $headers = getallheaders();  
+        if(isset($headers[API_HEADER])) {
+            return (array)$body = json_decode(file_get_contents("php://input"));
+        }
+                
         if ($this->isGet()) {
             foreach ($_GET as $key => $value) {
                 $body[$key] = filter_input(INPUT_GET, $key, FILTER_SANITIZE_SPECIAL_CHARS);
