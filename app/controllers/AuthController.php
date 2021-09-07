@@ -41,10 +41,11 @@ class AuthController extends Controller
         }
 
         if ($request->isPost()) {
-            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+            $body = $request->getBody();
+           
             $this->params = [
-                'username' => $_POST['username'],
-                'password' => $_POST['password']
+                'username' => $body['username'],
+                'password' => $body['password']
             ];
 
             try {
@@ -71,12 +72,12 @@ class AuthController extends Controller
     public function register(Request $request) : mixed
     {
         if ($request->isPost()) {
-            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+            $body = $request->getBody();
             $this->params = [
-                'username' => $_POST['username'],
-                'password' => $_POST['password'],
-                'firstname' => $_POST['firstname'],
-                'lastname' => $_POST['lastname']
+                'username' => $body['username'],
+                'password' => $body['password'],
+                'firstname' => $body['firstname'],
+                'lastname' => $body['lastname']
             ];
 
             try{
