@@ -61,8 +61,19 @@ class Router
 
     public function renderView(string $view,  array $data = []) : void
     {   
-        if (file_exists(VIEW_ROOT . $view . '.php ')) {
+        $headers = getallheaders();  
+        if(isset($headers[API_HEADER])) {
+            header('Content-Type: application/json');
+            $this->renderData($data);
+        }
+
+        if (!isset($headers[API_HEADER]) && file_exists(VIEW_ROOT . $view . '.php ')) {
             require_once VIEW_ROOT . $view . '.php';
         }     
+    }
+
+    private function renderData(array $data = []) : void
+    {   
+        echo json_encode($data);
     }
 }
