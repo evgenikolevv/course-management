@@ -4,6 +4,8 @@ define("APP_ROOT", dirname(__DIR__));
 
 define("VIEW_ROOT", APP_ROOT . "/views/");
 
+define('API_HEADER', 'course-api');
+
 define('DB_DRIVER', 'pgsql');
 
 define('DB_HOST', '127.0.0.1');
