@@ -41,8 +41,8 @@ Register
 > {  
 > &nbsp; &nbsp; &nbsp; "username" : "user1",  
 > &nbsp; &nbsp; &nbsp; "password" : "user1"  
-> &nbsp; &nbsp; &nbsp; "password" : "Ivan"  
-> &nbsp; &nbsp; &nbsp; "password" : "Ivanov"  
+> &nbsp; &nbsp; &nbsp; "firstname" : "Ivan"  
+> &nbsp; &nbsp; &nbsp; "lastname" : "Ivanov"  
 >}
 
 
