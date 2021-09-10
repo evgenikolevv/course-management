@@ -35,4 +35,32 @@ POST | /courses | adds course to favourite | Provide JSON with id of course |
 GET | /mycourses | lists all favourite courses |  | JSON  
 POST | /mycourses | removes course from favourite | Provide id of course |    
 
+## Requests
+
+Register
+> {  
+> &nbsp; &nbsp; &nbsp; "username" : "user1",  
+> &nbsp; &nbsp; &nbsp; "password" : "user1"  
+> &nbsp; &nbsp; &nbsp; "password" : "Ivan"  
+> &nbsp; &nbsp; &nbsp; "password" : "Ivanov"  
+>}
+
+
+Login
+> {  
+> &nbsp; &nbsp; &nbsp; "username" : "user1",  
+> &nbsp; &nbsp; &nbsp; "password" : "user1"  
+> }
+
+Add course to favourite
+> {  
+> &nbsp; &nbsp; &nbsp; "course_id" : "1",  
+> }
+
+Remove course from favourite
+> {  
+> &nbsp; &nbsp; &nbsp; "course_id" : "1",  
+> }
+
+### Developed by Evgeni Kolev
 
