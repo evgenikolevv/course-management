@@ -6,6 +6,7 @@ namespace Controllers;
 
 use Core\Controller;
 use Core\Exceptions\CourseAlreadyAddedException;
+use Core\Request;
 use Models\Course;
 use Utility\Auth;
 
@@ -42,12 +43,13 @@ class CourseController extends Controller
         return $this->render('courses/mycourses', $this->data);
     }
 
-    public function addCourseToFavourite() : mixed
+    public function addCourseToFavourite(Request $request) : mixed
     {
         try{
             $user = $_SESSION['user'];
-            $courseId = $_POST['course_id'];
-            $this->courseModel->addCourseToFavourite($user['id'], $courseId);
+            $body = $request->getBody();
+            
+            $this->courseModel->addCourseToFavourite($user['id'], $body['course_id']);
             $this->data['courses'] = $this->courseModel->findAll();
             $message = 'Successfully added course to favourite';
             $this->data['message'] = $message;
@@ -57,12 +59,13 @@ class CourseController extends Controller
        }
     }
 
-    public function removeCourseFromFavourite() : mixed
+    public function removeCourseFromFavourite(Request $request) : mixed
     {
         try{
             $user = $_SESSION['user'];
-            $courseId = $_POST['course_id'];
-            $this->courseModel->removeCourseFromFavourite($user['id'], $courseId);
+            $body = $request->getBody();
+
+            $this->courseModel->removeCourseFromFavourite($user['id'], $body['course_id']);
             $this->data['courses'] = $this->courseModel->findAllByUserId($user['id']);
             $message = 'Successfully removed course from favourite';
             $this->data['message'] = $message;
